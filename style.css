@@ -89,10 +89,12 @@ nav ul li a:hover {
     opacity: 0;
     z-index: -1;
     right: 100vw;
-    transition: 0.2s;
+    transition: 0.5s;
 }
-.main {
+main {
     padding: 20px;
+    max-width: 1400px;
+    margin: auto;
 }
 .hero {
     display: flex;
@@ -104,21 +106,116 @@ nav ul li a:hover {
     font-weight: bold;
     border-left: solid 2px green;
     padding-left: 8px;
+    margin-bottom: 16px;
+}
+.hero-title {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.hero-desc {
+    color: gray;
+    margin-bottom: 20px;
+}
+.hero-cta {
+    text-decoration: none;
+    background-color: green;
+    padding: 8px 16px;
+    border-radius: 19px;
+    color: white;
+    display: block;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.hero-cta:hover {
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+.hero-advs i.fa {
+    color: green;
+}
+.hero-advs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.hero-advs span {
+    text-wrap: nowrap;
 }
 .hero-img {
-    width: 50%;
+    width: 100%;
+    max-width: unset;
 }
-.review {
-    background-color: chocolate;
-    margin: 20px;
+.reviews {
+     
 }
+.reviews-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.reviews-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+.reviews-item {
+    background-color: rgb(219, 236, 236);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+}
+.reviews-score i.fa {
+    color: yellow;
+}
+.reviews-score span {
+    font-weight: ;
+}
+@media (max-width: 1024px) {
+        .hero {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
 @media (max-width: 768px){
     header nav {
         display: none;
     }
+    .reviews-box {
+        grid-template-columns: 1fr;
+    }
+    .reviews-title {
+        font-size: 24px;
+    }
     .btnBox .btnMenu {
         display: flex;
     }
+    .hero-title {
+        font-size: 32px;
+    }
+}
+footer {
+    background-color: green;
+    color: white;
+    padding: 40px 20px;
+}
+.footer-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer-logo-box {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.footer-logo-box img { 
+    width: 100px;
 }
 @media (max-width: 480px) {
     header {
